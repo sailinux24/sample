@@ -1,0 +1,74 @@
+753  #docker run -d docker.io/ubuntu tail -f /dev/null
+  754  #docker run -it docker.io/ubuntu sh
+  755  docker ps| grep ubuntu
+  756  docker stop 94b8ae4401a1
+  757  docker ps| grep ubuntu
+  758  docker ps -a | grep ubuntu
+  759  docker start 94b8ae4401a1
+  760  docker ps| grep ubuntu
+  761  docker pause 94b8ae4401a1
+  762  docker ps| grep ubuntu
+  763  docker unpause 94b8ae4401a1
+  764  docker ps| grep ubuntu
+  765  docker inspect 94b8ae4401a1
+  766  ps -ef | grep 13662
+  767  docker ps | grep nginx
+  768  docker inspect c3ff0c94224c
+  769  curl http://172.17.0.2
+  770  ip a | grep docker
+  771  #curl http://172.17.0.2
+  772  c1-> 172.17.0.2
+  773  docker ps | grep ubuntu
+  774  docker top 94b8ae4401a1
+  775  top
+  776  docker top 94b8ae4401a1
+  777  docker stats 94b8ae4401a1
+  778  #docker top 94b8ae4401a1
+  779  #docker stats 94b8ae4401a1
+  780  docker logs 94b8ae4401a1
+  781  docker stats --no-stream
+  782  docker stats --no-stream | grep 94b8ae4401a1
+  783  free -g
+  784  free -h
+  785  docker images | grep ubutnu
+  786  docker images | grep ubuntu
+  787  docker run -d --name chandra --memory 100m docker.io/ubuntu tail -f /dev/null
+  788  docker stats --no-stream | grep chandra
+  789  docker run -d --name chandra --memory 100M docker.io/ubuntu tail -f /dev/null
+  790  docker run -d --name chandra2 --memory 100M docker.io/ubuntu tail -f /dev/null
+  791  docker stats --no-stream | grep chandra
+  792  docker ps | grep chandra
+  793  docker stats --no-stream | grep 848fb38e4a6d
+  794  docker pull httpd
+  795  docker images | grep httpd
+  796  docker run -d docker.io/httpd
+  797  docker ps | grep httpd
+  798  docker exec -it be59b7fe4de0 sh
+  799  docker run -d -p 80 docker.io/httpd
+  800  docker ps | grep httpd
+  801  docker exec -it d1ec508eb155 bash
+  802  docker ps | grep httpd
+  803  curl http://localhost:32768
+  804  docker exec -it d1ec508eb155 bash
+  805  curl http://localhost:32768
+  806  docker save -o customhttp.tar  d1ec508eb155
+  807  docker commit  -a 'httpcustom' -m 'added web' d1ec508eb155
+  808  docker images
+  809  docker save -o customhttp.tar 38cbbc9dbb55
+  810  ls
+  811  scp customhttp.tar root@192.168.56.121:/tmp
+  812  docker images | grep httpd
+  
+  
+  ++++
+
+160  docker load customhttp.tar
+  161  docker load -i customhttp.tar
+  162  docker images
+  163  docker run -d -p 80 38cbbc9dbb55
+  164  docker ps 
+  165  docker ps | grep 38cbbc9dbb55
+  166  curl http://localhost:32768
+  167  docker images| grep 38cbbc9dbb55
+  168  history 
+[root@worker tmp]# 
