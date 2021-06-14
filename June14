@@ -1,0 +1,40 @@
+1233  13/06/21 08:19:19 vi Dockerfile
+ 1234  13/06/21 08:22:01 cat Dockerfile 
+ 1235  13/06/21 08:22:08 vi Dockerfile 
+ 1236  13/06/21 08:23:16 docker build -t customwebserver .
+ 1237  13/06/21 08:24:26 docker images
+ 1238  13/06/21 08:24:53 #docker build -t customwebserver .
+ 1239  13/06/21 08:25:07 docker ps
+ 1240  13/06/21 08:25:48 docker run -d --name=custowesite 0e2cf9446333
+ 1241  13/06/21 08:25:51 docker ps
+ 1242  13/06/21 08:26:13 docker inspect 147ea466af6d
+ 1243  13/06/21 08:26:57 curl http://172.17.0.4
+ 1244  13/06/21 08:27:59 vi Dockerfile 
+ 1245  13/06/21 08:28:43 docker build -t customwebserver2 .
+ 1246  13/06/21 08:29:33 docker images
+ 1247  13/06/21 08:30:03 docker run -d e8a10c331795
+ 1248  13/06/21 08:30:06 docker ps
+ 1249  13/06/21 08:30:17 curl http://172.17.0.5
+ 1250  13/06/21 08:34:48 ip a
+ 1251  13/06/21 08:35:16 curl http://172.17.0.5
+ 1252  13/06/21 08:35:20 curl http://172.17.0.4
+ 1253  13/06/21 08:35:33 hostname
+ 1254  13/06/21 08:35:40 curl http://172.17.0.4
+ 1255  13/06/21 08:38:54 docker run -d -p 9005:80 e8a10c331795
+ 1256  13/06/21 08:38:57 docker ps
+ 1257  13/06/21 08:39:27 curl http://localhost:9005
+ 1258  13/06/21 08:39:53 ip a
+ 1259  13/06/21 08:57:55 docker images
+ 1260  13/06/21 08:59:19 docker ps
+ 1261  13/06/21 09:00:26 history 
+[root@servertomact demodocfile]# cat Dockerfile 
+FROM centos:latest
+MAINTAINER    pathik
+RUN yum install -y httpd && yum clean all
+RUN echo " This is the demo of the dockerFILEand updated code" > /var/www/html/index.html
+EXPOSE 80
+CMD ["httpd", "-D", "FOREGROUND"]
+
+
+
+[root@servertomact demodocfile]#
